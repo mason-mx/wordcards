@@ -1,0 +1,64 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Word Cards
+email: your-email@domain.com
+description: > # this means to ignore newlines until "baseurl:"
+  Word Cards is a Bootstrap based jekyll theme for scene vocabulary.
+  
+  
+baseurl: "/wordcards" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site
+
+#sidebar
+default-image: wordcards-logo.jpg # If there is no featured image in a post then this image will be showed. Also on all pages this image will be showed. Use a 500x250 image.
+
+#post
+baseimg: vocabulary-flashcards.png
+
+#footer
+
+built-by: Mr.Wang
+
+copyright:
+   name: Mr.Wang
+   link: 'http://www.wordpress.com'
+
+# Build settings
+markdown: kramdown
+permalink: /:title/
+paginate: 6
+paginate_path: /page:num/
+
+# Tracker
+analytics: UA-83979019-1
+
+# Comments
+disqus: yes
+disqus-shortname: wordcards-demo
+
+#social
+facebook: http://facebook.com/wc
+quora: http://quora.com/wc
+twitter: http://twitter.com/@wc
+github: http://github.com/mason-mx
+email: hello@example.com
+
+#facebook like box
+fb-like-box: yes
+fb-app-id: 58
+fb-page-url: https://www.facebook.com/wc/
+fb-page-title: wc
+
+# Sass style
+sass:
+  style: compressed
+
+# Ruby Gems
+plugins: [jekyll-paginate, jekyll-seo-tag]
+
