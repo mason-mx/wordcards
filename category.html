@@ -11,39 +11,16 @@ layout: default
     <div id="#{{ tag_name | slugize }}"></div>
     <p></p>
 
-    <h3 class="tag-head"><a href="{{ site.baseurl }}/tagged#{{ tag_name | slugify }}">{{tag_name}}</a></h3>
+    <h3 class="tag-head">{{ tag_name }}</h3>
     <a name="{{ tag_name | slugize }}"></a>
+    {% for post in site.tags[tag_name] %}
+    <article class="archive-item">
+      <h4><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h4>
+    </article>
+    {% endfor %}
   </div>
 {% endfor %}
-</div>
-
-<dl>
-  <dt>A title of the graph</dt>
-  <dd class="percentage percentage-7">
-    <span class="text">
-      IE 11: 7%
-    </span>
-  </dd>
-  <dd class="percentage percentage-20">
-    <span class="text">
-      Chrome: 20%
-    </span>
-  </dd>
-  <dd class="percentage percentage-2">
-    <span class="text">
-      Android 4.4: 2%
-    </span>
-  </dd>
-</dl>
-
-<dl>
-  <dt>
-    Browser market share June 2015
-  </dt>
-  <dd class="percentage percentage-11"><span class="text">EASY: 11.33%</span></dd>
-  <dd class="percentage percentage-100"><span class="text">GOOD: 49.77%</span></dd>
-  <dd class="percentage percentage-16"><span class="text">FAIL: 16.09%</span></dd>
-</dl>
+</div> 
 
 <div id="categories">
 {% for category in site.categories %}
@@ -51,9 +28,14 @@ layout: default
     {% capture category_name %}{{ category | first }}{% endcapture %}
     <div id="#{{ category_name | slugize }}"></div>
     <p></p>
-
-    <h3 class="tag-head"><a href="{{ site.baseurl }}/category#{{ category_name | slugify }}">{{category_name}}</a></h3>
+    
+    <h3 class="category-head">{{ category_name }}</h3>
     <a name="{{ category_name | slugize }}"></a>
+    {% for post in site.categories[category_name] %}
+    <article class="archive-item">
+      <h4><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h4>
+    </article>
+    {% endfor %}
   </div>
 {% endfor %}
 </div>

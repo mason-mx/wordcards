@@ -79,9 +79,6 @@ img {
 
 }
 
-
-
-
 footer {
     border-top: 1px solid $grey-color-light;
 }
@@ -155,4 +152,19 @@ footer {
 
 article.post {
     margin-bottom: 5em;
+}
+
+.percentage:after {
+  content: "_";
+  display: block;
+  background-color: #3d9970;
+}
+
+@for $i from 1 through 100 {
+  .percentage-#{$i} {
+    &:after {
+      $value: ($i * 1%);
+      width: $value;
+    }
+  }
 }
