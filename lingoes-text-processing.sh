@@ -1,12 +1,34 @@
-#!/bin/sh
+#!/bin/bash
 
 file='./_posts/temp.md'
 filename=$(basename $file .md)
+
+process_substrings () {
+  cat $1 | while read line
+  do
+     oneline=${line}
+     while :
+     do
+       string=${oneline#*Find: }
+       string=${string%%\" class=ref*}
+       regex='.*Find: '${string}
+       #echo $regex
+       index=`expr match "$oneline" "$regex"`
+       if [ "$index" -le 0 ]
+       then
+         break
+       fi
+       oneline=${oneline:${index}}
+       regex2='<A title.*\/'$string'"><U>'
+       sed -i -e "s/${regex2}/<U>/" $file
+     done
+  done
+}
 #regex='<A title.\(.\{8\}\)'+$filename+'.\(.\{62\}\)'+$filename
 regex='<A title.*<U>'
 word="$(echo "$1" | sed 's/.*/\u&/')"
 head='---\nlayout: post\ntitle:  "'$word'"\ncategories: undefined\ntag: good\n---'
-echo $regex
+#echo $regex
 echo $head
 
 if [ -e "$file" ]; then
@@ -18,7 +40,8 @@ if [ -e "$file" ]; then
   sed -i 's/<FONT\(.\{15\}\)//g' $file
   sed -i 's/face="Lingoes Unicode">//g' $file
   sed -i 's/<\/FONT>//g' $file
-  sed -i -e "s/${regex}/<U>/g" $file
+  #sed -i -e "s/${regex}/<U>/g" $file #delete too much
+  process_substrings $file
   sed -i 's/<\/A>//g' $file
   sed -i 's/<\/DIV><\/DIV><\/DIV><\/DIV><\/DIV><\/DIV>//g' $file
   sed -i 's/<\/DIV><\/DIV>//g' $file
