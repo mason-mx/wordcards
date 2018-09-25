@@ -3,6 +3,9 @@
 file='./_posts/temp.md'
 filename=$(basename $file .md)
 
+# debug
+cp ./_posts/temp-2.md $file
+
 process_substrings () {
   cat $1 | while read line
   do
@@ -19,8 +22,10 @@ process_substrings () {
          break
        fi
        oneline=${oneline:${index}}
-       regex2='<A title.*\/'$string'"><U>'
-       sed -i -e "s/${regex2}/<U>/" $file
+       validated="${string// /\%20}" # " " -> "%20"
+       regex2='<A title.*\/'$validated'"><U>'
+       echo $regex2
+       sed -i -e "s/${regex2}/<U>/" $file # if have two instances (in light), it will delete too long
      done
   done
 }
@@ -34,7 +39,7 @@ echo $head
 if [ -e "$file" ]; then
   sed -i '/<DIV id=dict_EA8BE1CEC6BCAD41A4BAF7705F2AF5E6/{N;N;N;N;N;N;N;N;N;N;d;}' $file
   sed -i '1,305 {d}' $file
-  sed -i 's/<IMG\(.\{155\}\)[0-9].png">/*/g' $file
+  sed -i 's/<IMG\(.\{155\}\)[0-9]\+.png">/*/g' $file
   sed -i 's/<IMG\(.\{155\}\)[a-z].png">/*/g' $file
   sed -i 's/<IMG.*height=11>//g' $file
   sed -i 's/<FONT\(.\{15\}\)//g' $file
