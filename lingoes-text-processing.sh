@@ -84,13 +84,32 @@ if [ -e "$file" ]; then
   sed -i 's/dict:\/\/key\.D4722835273E184582F2D24696A738EA\//\{\{ site\.baseurl \}\}\//g' $file
   sed -i 's/dict:\/\/key\.25D62D261B9B6943BE86B7DCF8F9D255\//\{\{ site\.baseurl \}\}\//g' $file
   #sed -i -e "s/${regex}/<U>/g" $file #delete too much
-  process_substrings $file
+  #process_substrings $file
   #sed -i 's/<\/A>//g' $file
+  sed -i 's/<A title=\"Find: [a-z]\+\" class=ref /<A /g' $file
+  sed -i 's/<A title=\"Find: [a-z]\+\-[a-z]\+\" class=ref /<A /g' $file
+  sed -i 's/<A title=\"Find: [a-z]\+ [a-z]\+\" class=ref /<A /g' $file
+  sed -i 's/<A title=\"Find: [a-z]\+\" class=ant /<A /g' $file
+  sed -i 's/<A title=\"Find: [a-z]\+\-[a-z]\+\" class=ant /<A /g' $file
+  sed -i 's/<A title=\"Find: [a-z]\+ [a-z]\+\" class=ant /<A /g' $file
+  sed -i 's/<A title=\"Find: [a-z]\+\" class=syn /<A /g' $file
+  sed -i 's/<A title=\"Find: [a-z]\+\-[a-z]\+\" class=syn /<A /g' $file
+  sed -i 's/<A title=\"Find: [a-z]\+ [a-z]\+\" class=syn /<A /g' $file
+  sed -i 's/<A title=\"Find: [A-Z]\+\" class=ref /<A /g' $file
+  sed -i 's/<A title=\"Find: [A-Z]\+\-[A-Z]\+\" class=ref /<A /g' $file
+  sed -i 's/<A title=\"Find: [A-Z]\+ [A-Z]\+\" class=ref /<A /g' $file
+  sed -i 's/<A title=\"Find: [A-Z]\+\" class=ant /<A /g' $file
+  sed -i 's/<A title=\"Find: [A-Z]\+\-[A-Z]\+\" class=ant /<A /g' $file
+  sed -i 's/<A title=\"Find: [A-Z]\+ [A-Z]\+\" class=ant /<A /g' $file
+  sed -i 's/<A title=\"Find: [A-Z]\+\" class=syn /<A /g' $file
+  sed -i 's/<A title=\"Find: [A-Z]\+\-[A-Z]\+\" class=syn /<A /g' $file
+  sed -i 's/<A title=\"Find: [A-Z]\+ [A-Z]\+\" class=syn /<A /g' $file
   sed -i 's/<\/DIV><\/DIV><\/DIV><\/DIV><\/DIV><\/DIV>//g' $file
   sed -i 's/<\/DIV><\/DIV><\/DIV>/<\/DIV>/g' $file
   sed -i '/<DIV style=\"WIDTH: 100\%; MARGIN: 5px 0px 0px\">/{N;N;N;d;}' $file
   sed -i 's/\&nbsp;//g' $file
-  process_substrings_ex $file
+  sed -i 's/\r//g' $file
+  #process_substrings_ex $file
   #sed -i '/<DIV style="WIDTH: 100%; MARGIN: 5px 0px 0px">/{N;d;}' $file
 else
   echo "File does not exist"
