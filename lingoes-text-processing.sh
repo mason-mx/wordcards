@@ -2,10 +2,9 @@
 
 file='./_posts/temp.md'
 filename=$(basename $file .md)
-eee="1 1.50 string"
 
 # debug
-cp ./_posts/temp-2.md $file
+#cp ./_posts/temp-2.md $file
 
 process_substrings() {
   index=0
@@ -19,13 +18,14 @@ process_substrings() {
   for string in ${array[@]}; do
     if [ "$string" != "Find:" ]
     then
-      let length=${#string}+70
-      regex2="<A title\(.\{${length}\}\)${string}\">"
-      #echo $regex2
-      sed -i -e "s/${regex2}//" $file
+      #let length=${#string}+70
+      regex="<A title=\"Find: ${string}\" class=ref "
+      #echo $regex
+      sed -i -e "s/${regex}/<A /" $file
     fi
   done
 }
+
 process_substrings_ex () {
   cat $1 | while read line
   do
@@ -42,13 +42,13 @@ process_substrings_ex () {
          break
        fi
        oneline=${oneline:${index}}
-       validated="${string// /\%20}" # " " -> "%20"
+       #validated="${string// /\%20}" # " " -> "%20"
        # <A title="Find: traffic lights" class=ref href="dict://key.D4722835273E184582F2D24696A738EA/traffic%20lights"><U>
-       let length=${#string}+70
+       #let length=${#string}+70
        #echo $string":"$length
-       regex2="<A title\(.\{${length}\}\)${validated}\">"
+       regex2="<A title=\"Find: ${string}\" class=ref "
        #echo $regex2
-       sed -i -e "s/${regex2}//" $file
+       sed -i -e "s/${regex2}/<A /" $file
      done
   done
 }
@@ -68,9 +68,10 @@ if [ -e "$file" ]; then
   sed -i 's/<FONT\(.\{15\}\)//g' $file
   sed -i 's/face="Lingoes Unicode">//g' $file
   sed -i 's/<\/FONT>//g' $file
+  sed -i 's/dict:\/\/key\.D4722835273E184582F2D24696A738EA\//\{\{ site\.baseurl \}\}\//g' $file
   #sed -i -e "s/${regex}/<U>/g" $file #delete too much
   process_substrings $file
-  sed -i 's/<\/A>//g' $file
+  #sed -i 's/<\/A>//g' $file
   sed -i 's/<\/DIV><\/DIV><\/DIV><\/DIV><\/DIV><\/DIV>//g' $file
   sed -i 's/<\/DIV><\/DIV>//g' $file
   process_substrings_ex $file
