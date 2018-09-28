@@ -73,6 +73,7 @@ echo $head
 
 if [ -e "$file" ]; then
   sed -i '/<DIV id=dict_EA8BE1CEC6BCAD41A4BAF7705F2AF5E6/{N;N;N;N;N;N;N;N;N;N;N;N;N;N;N;N;N;N;N;N;N;N;N;N;N;d;}' $file
+  sed -i '/<DIV id=dict_EA8BE1CEC6BCAD41A4BAF7705F2AF5E6/{N;N;N;N;N;N;N;N;N;N;d;}' $file
   sed -i '/<DIV style=\"FONT-SIZE\: 9pt; FONT-FAMILY\: /{N;N;N;d;}' $file
   sed -i '1,305 {d}' $file
   sed -i 's/<IMG\(.\{155\}\)[0-9]\+.png">/*/g' $file
