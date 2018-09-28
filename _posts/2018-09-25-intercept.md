@@ -3,6 +3,7 @@ layout: post
 title:  "Intercept"
 categories: math
 tag: fail
+img: http://www.coolmath.com/sites/cmat/files/images/03-lines-01.gif
 ---
 <DIV style="MARGIN: 0px 0px 5px">in<B>·</B>ter<B>·</B>cept /ˌɪntəˈsept US -ər-/ <I>v</I> [T] <BR>[Date: 1400-1500; Language: Latin; Origin: , past participle of intercipere, from capere <I>'to take'</I>]<BR>to stop something or someone that is going from one place to another before they get there<BR>　*<I>an attempt to intercept drugs being smuggled over the border</I><BR>　*<I>Harker's phone calls had been intercepted.</I><BR><B>&gt;interception</B> /-ˈsepʃən/ <I>n</I> [U and C]</DIV>
 <DIV style="MARGIN: 0px 0px 5px">
