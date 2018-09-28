@@ -1,15 +1,19 @@
 <div class="col-md-4 mt20">
         <div class="post-img">
-           {% if page.img %}
-            <img width="600" src="{{site.baseurl}}/images/{{page.img}}" alt="{{page.title}}">
+          {% if page.img %}
+            {% if page.img contains 'http://' or page.img contains 'https://' %}
+              <img width="600" src="{{page.img}}" alt="{{page.title}}">
             {% else %}
-            <img width="600" src="{{site.baseurl}}/images/{{site.default-image}}" alt="coming soon">
+              <img width="600" src="{{site.baseurl}}/images/{{page.img}}" alt="{{page.title}}">
             {% endif %}
+          {% else %}
+          <img width="600" src="{{site.baseurl}}/images/{{site.default-image}}" alt="coming soon">
+          {% endif %}
         </div>
-            
-        
+
+
         <div class="mt10 recent">
-            <h2>Recent words</h2>        
+            <h2>Recent words</h2>
              <ul>
                 {% for post in site.related_posts limit:3 %}
 
