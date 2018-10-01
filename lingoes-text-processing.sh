@@ -107,7 +107,7 @@ if [ -e "$file" ]; then
   sed -i 's/<A title=\"Find: [A-Z]\+ [A-Z]\+\" class=syn /<A /g' $file
   sed -i 's/<\/DIV><\/DIV><\/DIV><\/DIV><\/DIV><\/DIV>//g' $file
   sed -i 's/<\/DIV><\/DIV><\/DIV>/<\/DIV>/g' $file
-  sed -i '/<DIV style=\"WIDTH: 100\%; MARGIN: 5px 0px 0px\">/{N;N;N;d;}' $file
+  sed -i '/<DIV style=\"WIDTH: 100\%; MARGIN: 5px 0px 0px\">/{N;N;d;}' $file
   sed -i 's/\&nbsp;//g' $file
   sed -i 's/\r//g' $file
   #process_substrings_ex $file
