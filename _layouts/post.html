@@ -8,12 +8,17 @@ layout: default
           <header class="post-header">
             <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
             <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
-                 
+
           </header>
 
           <div class="post-content" itemprop="articleBody">
             {{ content }}
-	    <h3 class="post-title" itemprop="name headline"><a target="_blank" href="http://ozdic.com/collocation-dictionary/{{page.title | downcase}}">See "{{page.title | downcase}}" in collocations</a></h3>
+      	    <h5 class="post-title" itemprop="name headline">
+              <a target="_blank" href="http://ozdic.com/collocation-dictionary/{{page.title | downcase}}">See "{{page.title | downcase}}" in collocations</a>
+            </h5>
+            <h5 class="post-title" itemprop="name headline">
+              <a target="_blank" href="http://idioms.thefreedictionary.com/{{page.title | downcase}}">See "{{page.title | downcase}}" in idioms</a>
+            </h5>
           </div>
 
     </article>
@@ -23,8 +28,8 @@ layout: default
          {% include disqus.html %}
         {% endif %}
     </div>
--->    
-    
+-->
+
     <div class="row">
             <ul class="pager">
              {% if page.next.url %}

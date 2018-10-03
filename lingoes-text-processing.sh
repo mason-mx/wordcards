@@ -4,7 +4,7 @@ file='./_posts/temp.md'
 filename=$(basename $file .md)
 
 # debug
-#cp ./_posts/temp-2.md $file
+#cp ./_posts/temp-copy.md $file
 
 process_substrings() {
   index=0
@@ -87,24 +87,18 @@ if [ -e "$file" ]; then
   #sed -i -e "s/${regex}/<U>/g" $file #delete too much
   #process_substrings $file
   #sed -i 's/<\/A>//g' $file
-  sed -i 's/<A title=\"Find: [a-z]\+\" class=ref /<A /g' $file
-  sed -i 's/<A title=\"Find: [a-z]\+\-[a-z]\+\" class=ref /<A /g' $file
-  sed -i 's/<A title=\"Find: [a-z]\+ [a-z]\+\" class=ref /<A /g' $file
-  sed -i 's/<A title=\"Find: [a-z]\+\" class=ant /<A /g' $file
-  sed -i 's/<A title=\"Find: [a-z]\+\-[a-z]\+\" class=ant /<A /g' $file
-  sed -i 's/<A title=\"Find: [a-z]\+ [a-z]\+\" class=ant /<A /g' $file
-  sed -i 's/<A title=\"Find: [a-z]\+\" class=syn /<A /g' $file
-  sed -i 's/<A title=\"Find: [a-z]\+\-[a-z]\+\" class=syn /<A /g' $file
-  sed -i 's/<A title=\"Find: [a-z]\+ [a-z]\+\" class=syn /<A /g' $file
-  sed -i 's/<A title=\"Find: [A-Z]\+\" class=ref /<A /g' $file
-  sed -i 's/<A title=\"Find: [A-Z]\+\-[A-Z]\+\" class=ref /<A /g' $file
-  sed -i 's/<A title=\"Find: [A-Z]\+ [A-Z]\+\" class=ref /<A /g' $file
-  sed -i 's/<A title=\"Find: [A-Z]\+\" class=ant /<A /g' $file
-  sed -i 's/<A title=\"Find: [A-Z]\+\-[A-Z]\+\" class=ant /<A /g' $file
-  sed -i 's/<A title=\"Find: [A-Z]\+ [A-Z]\+\" class=ant /<A /g' $file
-  sed -i 's/<A title=\"Find: [A-Z]\+\" class=syn /<A /g' $file
-  sed -i 's/<A title=\"Find: [A-Z]\+\-[A-Z]\+\" class=syn /<A /g' $file
-  sed -i 's/<A title=\"Find: [A-Z]\+ [A-Z]\+\" class=syn /<A /g' $file
+  sed -i 's/<A title=\"Find: [a-z|A-Z]\+\" class=ref /<A /g' $file
+  sed -i 's/<A title=\"Find: [a-z|A-Z]\+([a-z|A-Z]\+)\" class=ref /<A /g' $file
+  sed -i 's/<A title=\"Find: [a-z|A-Z]\+\(-[a-z|A-Z]\+\)\{1,\}\" class=ref /<A /g' $file
+  sed -i 's/<A title=\"Find: [a-z|A-Z]\+\( [a-z|A-Z]\+\)\{1,\}\" class=ref /<A /g' $file
+  sed -i 's/<A title=\"Find: [a-z|A-Z]\+\" class=ant /<A /g' $file
+  sed -i 's/<A title=\"Find: [a-z|A-Z]\+([a-z|A-Z]\+)\" class=ant /<A /g' $file
+  sed -i 's/<A title=\"Find: [a-z|A-Z]\+\(-[a-z|A-Z]\+\)\{1,\}\" class=ant /<A /g' $file
+  sed -i 's/<A title=\"Find: [a-z|A-Z]\+\( [a-z|A-Z]\+\)\{1,\}\" class=ant /<A /g' $file
+  sed -i 's/<A title=\"Find: [a-z|A-Z]\+\" class=syn /<A /g' $file
+  sed -i 's/<A title=\"Find: [a-z|A-Z]\+([a-z|A-Z]\+)\" class=syn /<A /g' $file
+  sed -i 's/<A title=\"Find: [a-z|A-Z]\+\(-[a-z|A-Z]\+\)\{1,\}\" class=syn /<A /g' $file
+  sed -i 's/<A title=\"Find: [a-z|A-Z]\+\( [a-z|A-Z]\+\)\{1,\}\" class=syn /<A /g' $file
   sed -i 's/<\/DIV><\/DIV><\/DIV><\/DIV><\/DIV><\/DIV>//g' $file
   sed -i 's/<\/DIV><\/DIV><\/DIV>/<\/DIV>/g' $file
   sed -i '/<DIV style=\"WIDTH: 100\%; MARGIN: 5px 0px 0px\">/{N;N;d;}' $file
