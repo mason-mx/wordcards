@@ -21,18 +21,16 @@ layout: default
 	{% endfor %}
   <dl>
     <dd id="easy-tag" class="percentage percentage-{{ easy }}">
-      <a href="{{ site.baseurl }}/tagged#easy">easy</a></h3>
+      <span class="text"><a href="{{ site.baseurl }}/tagged#easy">easy</a></span></h3>
     </dd>
     <dd id="good-tag" class="percentage percentage-{{ good }}">
-      <a href="{{ site.baseurl }}/tagged#good">good</a></h3>
+      <span class="text"><a href="{{ site.baseurl }}/tagged#good">good</a></span></h3>
     </dd>
     <dd id="fail-tag" class="percentage percentage-{{ total }}">
-      <a href="{{ site.baseurl }}/tagged#fail">fail</a></h3>
+      <span class="text"><a href="{{ site.baseurl }}/tagged#fail">fail</a></span></h3>
     </dd>
   </dl>
 </div>
-
-
 
 <div id="categories">
 {% for category in site.categories %}
@@ -46,6 +44,66 @@ layout: default
   </div>
 {% endfor %}
 </div>
+
+<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+      <div class="flippable appcon ac-bicycle">
+        <div class="front">
+          <span>B</span>
+          <i class="fa fa-bicycle"></i>
+        </div>
+        <div class="back">
+          Bicycle
+        </div>
+      </div>
+  </div>
+
+<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+      <div class="flippable appcon ac-car">
+        <div class="front">
+          <span>C</span>
+          <i class="fa fa-car"></i>
+        </div>
+        <div class="back">
+          Car
+        </div>
+      </div>
+  </div>
+
+    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+      <div class="flippable appcon ac-truck">
+        <div class="front">
+          <span>T</span>
+          <i class="fa fa-truck"></i>
+        </div>
+        <div class="back">
+          Truck
+        </div>
+      </div>
+  </div>
+
+  <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+      <div class="flippable appcon ac-umbrella">
+        <div class="front">
+          <span>U</span>
+          <i class="fa fa-umbrella"></i>
+        </div>
+        <div class="back">
+          umbrella
+        </div>
+      </div>
+  </div>
+
+<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+      <div class="flippable appcon ac-plane">
+        <div class="front">
+          <span>P</span>
+          <i class="fa fa-plane"></i>
+        </div>
+        <div class="back">
+          Plane
+        </div>
+      </div>
+  </div>
 
     <div class="row pack">
 

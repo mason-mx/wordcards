@@ -154,10 +154,69 @@ article.post {
     margin-bottom: 5em;
 }
 
-.percentage:after {
-  content: "EASY";
+dl {
+  display: flex;
+  background-color: white;
+  flex-direction: column;
+  width: 100%;
+  max-width: 700px;
+  position: relative;
+  padding: 20px;
+  font-size: 1.8em;
+  font-weight: 700;
+}
+
+dt {
+  align-self: flex-start;
+  width: 100%;
+  font-weight: 700;
   display: block;
-  background-color: #3d9970;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: 700;
+  margin-bottom: 20px;
+  margin-left: 130px;
+}
+
+.text {
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  width: 130px;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  justify-content: flex-end;
+}
+
+.percentage {
+  font-size: .8em;
+  line-height: 1;
+  text-transform: uppercase;
+  width: 100%;
+  height: 40px;
+  margin-left: 130px;
+
+  &:after {
+    content: "";
+    display: block;
+    background-color: #3d9970;
+    width: 50px;
+    margin-bottom: 10px;
+    height: 90%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background-color .3s ease;
+    cursor: pointer;
+  }
+  &:hover,
+  &:focus {
+    &:after {
+       background-color: #aaa;
+    }
+  }
 }
 
 @for $i from 1 through 100 {
@@ -166,5 +225,114 @@ article.post {
       $value: ($i * 1%);
       width: $value;
     }
+  }
+}
+
+.flip-container {
+  perspective: 1000;
+  margin: 10px;
+  float: left;
+  cursor:pointer;
+
+  .flippable {
+    transition: 0.5s;
+    transform-style: preserve-3d;
+    position: relative;
+  }
+
+  .flipme {
+    transform: rotateY(180deg);
+  }
+
+/*  &:hover{
+    .flippable {
+      transform: rotateY(180deg);
+    }
+  }*/
+
+}
+
+.flip-container, .front, .back {
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  font-size: 40px;
+  border-radius: 5px;
+}
+
+.front, .back {
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+
+.front {
+  z-index: 2;
+  color: white;
+
+  span{
+    font-size:20px;
+    position:absolute;
+    top:-30px;
+    left:10px;
+    font-family:verdana;
+  }
+}
+
+.back {
+  transform: rotateY(180deg);
+  font-size: 18px;
+  border:1px solid;
+  font-family: Verdana;
+  color: white;
+}
+
+
+.ac-bicycle{
+  .front{
+    background:$b1;
+  }
+  .back{
+    background:darken($b1,30%);
+    border-color:lighten($b1,30%);
+  }
+}
+.ac-car{
+  .front{
+    background:$gr1;
+  }
+  .back{
+    background:darken($gr1,30%);
+    border-color:lighten($gr1,30%);
+  }
+}
+.ac-truck{
+  .front{
+    background:$y1;
+  }
+  .back{
+    background:darken($y1,30%);
+    border-color:lighten($y1,30%);
+  }
+}
+.ac-umbrella{
+  .front{
+    background:$o1;
+  }
+  .back{
+    background:darken($o1,30%);
+    border-color:lighten($o1,30%);
+  }
+}
+.ac-plane{
+  .front{
+    background:$r1;
+  }
+  .back{
+    background:darken($r1,30%);
+    border-color:lighten($r1,30%);
   }
 }

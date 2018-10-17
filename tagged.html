@@ -11,22 +11,26 @@ permalink: /tagged/
         {% capture tag_name %}{{ tag | first }}{% endcapture %}
         <div id="#{{ tag_name | slugize }}"></div>
         <p></p>
-        
+
         <h3 class="tag-head">{{ tag_name }}</h3>
         <a name="{{ tag_name | slugize }}"></a>
         {% for post in site.tags[tag_name] %}
-          <div class="col-md-4 card">  
+          <div class="col-md-4 card">
             <div class="panel panel-default">
               {% if post.img %}
-              <img width="100%" src="{{site.baseurl}}/images/{{post.img}}" alt="{{post.title}}">
+                {% if post.img contains 'http://' or post.img contains 'https://' %}
+                  <img width="100%" src="{{post.img}}" alt="{{post.title}}">
+                {% else %}
+                  <img width="100%" src="{{site.baseurl}}/images/{{post.img}}" alt="{{post.title}}">
+                {% endif %}
               {% else %}
               <img width="100%" src="{{site.baseurl}}/images/{{site.baseimg}}" alt="{{site.title}}">
               {% endif %}
-                
+
               <div class="panel-body">
                 <h3 class="panel-title pull-left"><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h3>
               </div>
-                
+
               <div class="panel-body"><small>Previous | Next</small></div>
             </div>
           </div>
