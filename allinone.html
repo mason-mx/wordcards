@@ -4,49 +4,6 @@ layout: default
 
 <div class="home">
 
-<div id="tags">
-  {% assign total = 0 %}
-  {% assign easy = 0 %}
-  {% assign good = 0 %}
-  {% assign fail = 0 %}
-  {% for post in site.posts %}
-    {% assign total=total | plus:1 %}
-		{% if post.tags contains "easy" %}
-			{% assign easy=easy | plus:1 %}
-    {% else post.tags contains "good" %}
-			{% assign good=good | plus:1 %}
-    {% else %}
-			{% assign fail=fail | plus:1 %}
-		{% endif %}
-	{% endfor %}
-  <dl>
-    <dd id="easy-tag" class="percentage percentage-{{ easy }}">
-      <a href="{{ site.baseurl }}/tagged#easy">easy</a></h3>
-    </dd>
-    <dd id="good-tag" class="percentage percentage-{{ good }}">
-      <a href="{{ site.baseurl }}/tagged#good">good</a></h3>
-    </dd>
-    <dd id="fail-tag" class="percentage percentage-{{ total }}">
-      <a href="{{ site.baseurl }}/tagged#fail">fail</a></h3>
-    </dd>
-  </dl>
-</div>
-
-
-
-<div id="categories">
-{% for category in site.categories %}
-  <div class="categories-group">
-    {% capture category_name %}{{ category | first }}{% endcapture %}
-    <div id="#{{ category_name | slugize }}"></div>
-    <p></p>
-
-    <h3 class="tag-head"><a href="{{ site.baseurl }}/category#{{ category_name | slugify }}">{{category_name}}</a></h3>
-    <a name="{{ category_name | slugize }}"></a>
-  </div>
-{% endfor %}
-</div>
-
     <div class="row pack">
 
         {% for post in paginator.posts %}

@@ -59,7 +59,7 @@ img {
    box-shadow: 0 0 1px rgba(0,0,0,.4);
    transition: all 0.3s ease;
     &:hover, &:focus, &:active {
-           box-shadow: 
+           box-shadow:
                     0px 1px 0px #ccc,
                     0px 2px 0px #c9c9c9,
                     0px 3px 0px #bbb,
@@ -155,7 +155,7 @@ article.post {
 }
 
 .percentage:after {
-  content: "_";
+  content: "EASY";
   display: block;
   background-color: #3d9970;
 }
