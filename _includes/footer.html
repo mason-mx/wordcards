@@ -7,12 +7,12 @@
 
             <div class="col-md-4 text-center mt25" >
                 {% if site.built-by %}
-                <a target="_blank" href="{{site.baseurl}}"><img src="{{ "/images/github.svg" | prepend: site.baseurl}}" alt="{{site.built-by}}"></a>
+                <a target="_blank" href="{{site.baseurl}}"><img src="{{ "/images/mason-512.png" | prepend: site.baseurl}}" alt="{{site.built-by}}" width="32" height="32"></a>
                 {% endif %}
             </div>
             <div class="col-md-4 text-center mt25">
                {% if site.facebook %}
-                <a target="_blank" href="{{site.facebook}}"><li class="social facebook"><i class="fa fa-facebook-square"></i></li></a> 
+                <a target="_blank" href="{{site.facebook}}"><li class="social facebook"><i class="fa fa-facebook-square"></i></li></a>
                 {% endif %}
                {% if site.quora %}
                 <a target="_blank" href="{{site.quora}}"><li class="social quora"><i class="fa fa-quora"></i></li></a>
@@ -28,6 +28,6 @@
                 {% endif %}
             </div>
 
-        </div> 
+        </div>
     </div>
 </footer>
