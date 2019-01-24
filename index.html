@@ -32,76 +32,74 @@ layout: default
   </div>
 
   <div id="categories">
-  {% for category in site.categories %}
-    <div class="categories-group">
-      {% capture category_name %}{{ category | first }}{% endcapture %}
-      <div id="#{{ category_name | slugize }}"></div>
-      <p></p>
+    {% for category in site.categories %}
+      <div class="categories-group">
+        {% capture category_name %}{{ category | first }}{% endcapture %}
+        <div id="#{{ category_name | slugize }}"></div>
+        <p></p>
 
-      <h3 class="tag-head"><a href="{{ site.baseurl }}/category#{{ category_name | slugify }}">{{category_name}}</a></h3>
-      <a name="{{ category_name | slugize }}"></a>
+        <h3 class="tag-head"><a href="{{ site.baseurl }}/category#{{ category_name | slugify }}">{{category_name}}</a></h3>
+        <a name="{{ category_name | slugize }}"></a>
+      </div>
+    {% endfor %}
+    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+        <div class="flippable appcon ac-bicycle">
+          <div class="front">
+            <span>B</span>
+            <i class="fa fa-bicycle"></i>
+          </div>
+          <div class="back">
+            Bicycle
+          </div>
+        </div>
     </div>
-  {% endfor %}
-  </div>
 
-  <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-      <div class="flippable appcon ac-bicycle">
-        <div class="front">
-          <span>B</span>
-          <i class="fa fa-bicycle"></i>
+    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+        <div class="flippable appcon ac-car">
+          <div class="front">
+            <span>C</span>
+            <i class="fa fa-car"></i>
+          </div>
+          <div class="back">
+            Car
+          </div>
         </div>
-        <div class="back">
-          Bicycle
-        </div>
-      </div>
-  </div>
+    </div>
 
-  <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-      <div class="flippable appcon ac-car">
-        <div class="front">
-          <span>C</span>
-          <i class="fa fa-car"></i>
+    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+        <div class="flippable appcon ac-truck">
+          <div class="front">
+            <span>T</span>
+            <i class="fa fa-truck"></i>
+          </div>
+          <div class="back">
+            Truck
+          </div>
         </div>
-        <div class="back">
-          Car
-        </div>
-      </div>
-  </div>
+    </div>
 
-  <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-      <div class="flippable appcon ac-truck">
-        <div class="front">
-          <span>T</span>
-          <i class="fa fa-truck"></i>
+    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+        <div class="flippable appcon ac-umbrella">
+          <div class="front">
+            <span>U</span>
+            <i class="fa fa-umbrella"></i>
+          </div>
+          <div class="back">
+            umbrella
+          </div>
         </div>
-        <div class="back">
-          Truck
-        </div>
-      </div>
-  </div>
+    </div>
 
-  <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-      <div class="flippable appcon ac-umbrella">
-        <div class="front">
-          <span>U</span>
-          <i class="fa fa-umbrella"></i>
+    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+        <div class="flippable appcon ac-plane">
+          <div class="front">
+            <span>P</span>
+            <i class="fa fa-plane"></i>
+          </div>
+          <div class="back">
+            Plane
+          </div>
         </div>
-        <div class="back">
-          umbrella
-        </div>
-      </div>
+    </div>
   </div>
-
-  <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-      <div class="flippable appcon ac-plane">
-        <div class="front">
-          <span>P</span>
-          <i class="fa fa-plane"></i>
-        </div>
-        <div class="back">
-          Plane
-        </div>
-      </div>
-  </div>
-
 </div>

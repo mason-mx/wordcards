@@ -2,43 +2,38 @@
 layout: page
 ---
 <div class="home">
+  <div class="row pack">
+    {% for post in paginator.posts %}
+      <div class="col-md-4 card">
+        <a href="{{ post.url | prepend: site.baseurl }}" class="index-anchor">
+          <div class="panel panel-default">
+            {% if post.img %}
+              {% if post.img contains 'http://' or post.img contains 'https://' %}
+                <img width="100%" src="{{post.img}}" alt="{{post.title}}">
+              {% else %}
+                <img width="100%" src="{{site.baseurl}}/images/{{post.img}}" alt="{{post.title}}">
+              {% endif %}
+            {% else %}
+              <img width="100%" src="{{site.baseurl}}/images/{{site.baseimg}}" alt="{{site.title}}">
+            {% endif %}
 
-    <div class="row pack">
-
-        {% for post in paginator.posts %}
-            <div class="col-md-4 card">
-             <a href="{{ post.url | prepend: site.baseurl }}" class="index-anchor">
-                <div class="panel panel-default">
-
-                  {% if post.img %}
-                    {% if post.img contains 'http://' or post.img contains 'https://' %}
-                      <img width="100%" src="{{post.img}}" alt="{{post.title}}">
-                    {% else %}
-                      <img width="100%" src="{{site.baseurl}}/images/{{post.img}}" alt="{{post.title}}">
-                    {% endif %}
-                  {% else %}
-                  <img width="100%" src="{{site.baseurl}}/images/{{site.baseimg}}" alt="{{site.title}}">
-                  {% endif %}
-
-                  <div class="panel-body">
-                    <h3 class="panel-title pull-left">{{ post.title | truncate: 25 }}</h3><span class="post-meta pull-right"><small>{{ post.date | date: "%b %-d, %Y" }}</small></span>
-                  </div>
-
-                  <div class="panel-body"><small>
-                    {{ post.excerpt | strip_html | strip_newlines | truncate: 180 }}</small>
-                  </div>
-                </div>
-                </a>
+            <div class="panel-body">
+              <h3 class="panel-title pull-left">{{ post.title | truncate: 25 }}</h3><span class="post-meta pull-right"><small>{{ post.date | date: "%b %-d, %Y" }}</small></span>
             </div>
 
-          {% endfor %}
+            <div class="panel-body"><small>
+              {{ post.excerpt | strip_html | strip_newlines | truncate: 180 }}</small>
+            </div>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+  </div>
 
-    </div>
-
-<div class="row">
-    <div class="col-md-2">  </div>
+  <div class="row">
+    <div class="col-md-2"></div>
     <div class="col-md-8">
-        {% if paginator.total_pages > 1 %}
+      {% if paginator.total_pages > 1 %}
         <ul class="pagination">
           {% if paginator.previous_page %}
             <li><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a></li>
@@ -50,9 +45,9 @@ layout: page
             {% if page == paginator.page %}
               <li class="active"><span><em>{{ page }}</em></span></li>
             {% elsif page == 1 %}
-            <li><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a></li>
+              <li><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a></li>
             {% else %}
-            <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
+              <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
             {% endif %}
           {% endfor %}
 
@@ -61,10 +56,9 @@ layout: page
           {% else %}
             <li><span >Next &raquo;</span></li>
           {% endif %}
-          </ul>
-        {% endif %}
-
+        </ul>
+      {% endif %}
     </div>
-    <div class="col-md-2">  </div>
-</div>
+    <div class="col-md-2"></div>
+  </div>
 </div>
