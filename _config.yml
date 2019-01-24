@@ -10,8 +10,8 @@ title: Word Cards
 email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
   Word Cards is a Bootstrap based jekyll theme for scene vocabulary.
-  
-  
+
+
 baseurl: "/wordcards" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
 
@@ -33,7 +33,7 @@ copyright:
 markdown: kramdown
 permalink: /:title/
 paginate: 6
-paginate_path: /page:num/
+paginate_path: /allinone/:num/
 
 # Tracker
 analytics: UA-83979019-1
@@ -61,4 +61,3 @@ sass:
 
 # Ruby Gems
 plugins: [jekyll-paginate, jekyll-seo-tag]
-
