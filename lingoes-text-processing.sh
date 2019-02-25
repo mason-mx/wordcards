@@ -1,5 +1,13 @@
 #!/bin/bash
 
+# usage:
+# ./lingoes-text-processing.sh [word]
+if [ $# -eq 0 ]
+  then
+    echo "usage: ./lingoes-text-processing.sh [word]"
+    exit 1
+fi
+
 file='./_posts/temp.md'
 filename=$(basename $file .md)
 
