@@ -5,52 +5,56 @@ permalink: /category/
 ---
 
 <div class="home">
-  <div id="categories">
+  <div class="row" id="categories">
     {% for category in site.categories %}
-    <div class="row categories-group">
+    <div class="col-3 categories-group">
       {% capture category_name %}{{ category | first }}{% endcapture %}
-      <div id="#{{ category_name | slugize }}"></div>
-
-      <h3 class="category-head">{{ category_name }}</h3>
-      <a name="{{ category_name | slugize }}"></a>
+      <div class="row" id="#{{ category_name | slugize }}">
+        <h3 class="category-head">{{ category_name }}</h3>
+        <a name="{{ category_name | slugize }}"></a>
+      </div>
       {% assign postIndex = 0 %}
-      {% for post in site.categories[category_name] %}
-        {% assign flipClass = "next" %}
-        {% if postIndex == 0 %}
-          {% assign flipClass = "current" %}
-        {% endif %}
-        <div class="flip-container {{flipClass}}">
-            <div class="flippable ac-{{post.tag}}">
-              <div class="front">
-                <article>
-                  <h4>{{post.tag}}</h4>
-                  <p>{{post.title}}</p>
-                </article>
-              </div>
-              <div class="back">
-                <article>
-                  <h4><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h4>
-                  <p>
-                    {% if post.img %}
-                      {% if post.img contains 'http://' or post.img contains 'https://' %}
-                        <img width="100%" src="{{post.img}}" alt="{{post.title}}">
-                      {% else %}
-                        <img width="100%" src="{{site.baseurl}}/images/{{post.img}}" alt="{{post.title}}">
+      <div class="row">
+        {% for post in site.categories[category_name] %}
+          {% assign flipClass = "next" %}
+          {% if postIndex == 0 %}
+            {% assign flipClass = "current" %}
+          {% endif %}
+          <div class="flip-container {{flipClass}}">
+              <div class="flippable ac-{{post.tag}}">
+                <div class="front">
+                  <article>
+                    <h4>{{post.tag}}</h4>
+                    <p>{{post.title}}</p>
+                  </article>
+                </div>
+                <div class="back">
+                  <article>
+                    <h4><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h4>
+                    <p>
+                      {% if post.img %}
+                        {% if post.img contains 'http://' or post.img contains 'https://' %}
+                          <img width="100%" src="{{post.img}}" alt="{{post.title}}">
+                        {% else %}
+                          <img width="100%" src="{{site.baseurl}}/images/{{post.img}}" alt="{{post.title}}">
+                        {% endif %}
                       {% endif %}
-                    {% endif %}
-                  </p>
-                </article>
+                    </p>
+                  </article>
+                </div>
               </div>
-            </div>
-        </div>
-        {% assign postIndex=postIndex | plus:1 %}
-      {% endfor %}
-      {% if postIndex > 1 %}
-        <div class="flip-control">
-          <button class="btn btn-primary btn-circle"><i class="fa fa-angle-double-left" aria-hidden="true"></i></button>
-          <button class="btn btn-primary btn-circle"><i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
-        </div>
-      {% endif %}
+          </div>
+          {% assign postIndex=postIndex | plus:1 %}
+        {% endfor %}
+      </div>
+      <div class="row">
+        {% if postIndex > 1 %}
+          <div class="flip-control">
+            <button class="btn btn-primary btn-circle"><i class="fa fa-angle-double-left" aria-hidden="true"></i></button>
+            <button class="btn btn-primary btn-circle"><i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+          </div>
+        {% endif %}
+      </div>
     </div>
     {% endfor %}
   </div>
