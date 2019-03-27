@@ -7,7 +7,7 @@ permalink: /category/
 <div class="home">
   <div id="categories">
     {% for category in site.categories %}
-    <div class="categories-group">
+    <div class="row categories-group">
       {% capture category_name %}{{ category | first }}{% endcapture %}
       <div id="#{{ category_name | slugize }}"></div>
       <p></p>
@@ -15,9 +15,30 @@ permalink: /category/
       <h3 class="category-head">{{ category_name }}</h3>
       <a name="{{ category_name | slugize }}"></a>
       {% for post in site.categories[category_name] %}
-      <article class="archive-item">
-        <h4><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h4>
-      </article>
+      <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+          <div class="flippable appcon ac-bicycle">
+            <div class="front">
+              <article>
+                <h4>{{post.tag}}</h4>
+                <p>{{post.title}}</p>
+              </article>
+            </div>
+            <div class="back">
+              <article>
+                <h4><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h4>
+                <p>
+                  {% if post.img %}
+                    {% if post.img contains 'http://' or post.img contains 'https://' %}
+                      <img width="100%" src="{{post.img}}" alt="{{post.title}}">
+                    {% else %}
+                      <img width="100%" src="{{site.baseurl}}/images/{{post.img}}" alt="{{post.title}}">
+                    {% endif %}
+                  {% endif %}
+                </p>
+              </article>
+            </div>
+          </div>
+      </div>
       {% endfor %}
     </div>
     {% endfor %}
