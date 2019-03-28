@@ -254,20 +254,28 @@ dt {
 }
 
 .flip-container, .front, .back {
-  width: 300px;
-  height: 200px;
+  width: 100%;
+  min-height: 200px;
   line-height: 100px;
   text-align: center;
   font-size: 30px;
   border-radius: 5px;
 }
 
-.flip-container + .current {
+.flip-container {
+  display: none;
+}
+
+.flip-container.current {
   display: block;
 }
 
-.flip-container + .next {
-  display: none;
+.flip-container.next {
+
+}
+
+.flip-container.previous {
+
 }
 
 .front, .back {
@@ -338,4 +346,18 @@ dt {
     text-align: center;
     font-size: 12px;
     line-height: 1.42857;
+}
+
+.card-container {
+  border: 1px solid grey;
+  border-bottom: none;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.control-container {
+  border: 1px solid grey;
+  border-top: none;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }

@@ -14,9 +14,9 @@ permalink: /category/
         <a name="{{ category_name | slugize }}"></a>
       </div>
       {% assign postIndex = 0 %}
-      <div class="row">
+      <div class="row card-container">
         {% for post in site.categories[category_name] %}
-          {% assign flipClass = "next" %}
+          {% assign flipClass = "" %}
           {% if postIndex == 0 %}
             {% assign flipClass = "current" %}
           {% endif %}
@@ -47,11 +47,11 @@ permalink: /category/
           {% assign postIndex=postIndex | plus:1 %}
         {% endfor %}
       </div>
-      <div class="row">
+      <div class="row control-container">
         {% if postIndex > 1 %}
-          <div class="flip-control">
-            <button class="btn btn-primary btn-circle"><i class="fa fa-angle-double-left" aria-hidden="true"></i></button>
-            <button class="btn btn-primary btn-circle"><i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+          <div class="d-flex justify-content-between w-100 px-5 flip-control">
+            <button class="btn btn-primary btn-circle btn-previous"><i class="fa fa-angle-double-left" aria-hidden="true"></i></button>
+            <button class="btn btn-primary btn-circle btn-next"><i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
           </div>
         {% endif %}
       </div>
