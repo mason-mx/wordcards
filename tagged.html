@@ -5,36 +5,64 @@ permalink: /tagged/
 ---
 
 <div class="home">
-  <div id="tags" class="row pack">
+  <div id="tags" class="row">
     {% for tag in site.tags %}
-      <div class="tags-group">
+      <div class="col-4 tags-group">
         {% capture tag_name %}{{ tag | first }}{% endcapture %}
-        <div id="#{{ tag_name | slugize }}"></div>
-        <p></p>
-
-        <h3 class="tag-head">{{ tag_name }}</h3>
-        <a name="{{ tag_name | slugize }}"></a>
-        {% for post in site.tags[tag_name] %}
-          <div class="col-md-4 card">
-            <div class="panel panel-default">
-              {% if post.img %}
-                {% if post.img contains 'http://' or post.img contains 'https://' %}
-                  <img width="100%" src="{{post.img}}" alt="{{post.title}}">
-                {% else %}
-                  <img width="100%" src="{{site.baseurl}}/images/{{post.img}}" alt="{{post.title}}">
-                {% endif %}
-              {% else %}
-                <img width="100%" src="{{site.baseurl}}/images/{{site.baseimg}}" alt="{{site.title}}">
-              {% endif %}
-
-              <div class="panel-body">
-                <h3 class="panel-title pull-left"><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h3>
-              </div>
-
-              <div class="panel-body"><small>Previous | Next</small></div>
+        <div class="row" id="#{{ tag_name | slugize }}">
+          <h3 class="tag-head">{{ tag_name }}</h3>
+          <a name="{{ tag_name | slugize }}"></a>
+        </div>
+        {% assign postIndex = 0 %}
+        <div class="row card-container">
+          {% for post in site.tags[tag_name] %}
+            {% assign flipClass = "" %}
+            {% if postIndex == 0 %}
+              {% assign flipClass = "current" %}
+            {% endif %}
+            <div class="flip-container {{flipClass}}">
+                <div class="flippable ac-{{post.tag}}">
+                  <div class="front">
+                    <article>
+                      <h4>{{post.tag}}</h4>
+                      <p>{{post.title}}</p>
+                    </article>
+                  </div>
+                  <div class="back">
+                    <article>
+                      <h4><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h4>
+                      <p>
+                        {% assign imgheight = "135px" %}
+                        {% if post.word_phonetic %}
+                          {{post.word_phonetic}}
+                          <br>
+                          {% assign imgheight = "110px" %}
+                        {% endif %}
+                        {% if post.img %}
+                          {% if post.img contains 'http://' or post.img contains 'https://' %}
+                            <img height={{imgheight}} src="{{post.img}}" alt="{{post.title}}">
+                          {% else %}
+                            <img height={{imgheight}} src="{{site.baseurl}}/images/{{post.img}}" alt="{{post.title}}">
+                          {% endif %}
+                        {% else %}
+                          {{post.word_excerpt}}
+                        {% endif %}
+                      </p>
+                    </article>
+                  </div>
+                </div>
             </div>
-          </div>
-        {% endfor %}
+            {% assign postIndex=postIndex | plus:1 %}
+          {% endfor %}
+        </div>
+        <div class="row control-container">
+          {% if postIndex > 1 %}
+            <div class="d-flex justify-content-between w-100 px-5 flip-control">
+              <button class="btn btn-primary btn-circle btn-previous"><i class="fa fa-angle-double-left" aria-hidden="true"></i></button>
+              <button class="btn btn-primary btn-circle btn-next"><i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+            </div>
+          {% endif %}
+        </div>
       </div>
     {% endfor %}
   </div>
