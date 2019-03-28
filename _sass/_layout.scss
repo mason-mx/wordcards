@@ -264,18 +264,29 @@ dt {
 
 .flip-container {
   display: none;
+  //background: transparent;
+  //box-shadow: none;
+  //transform-style: preserve-3d;
+  //zoom: 1;
 }
 
 .flip-container.current {
   display: block;
+  //z-index: 5;
 }
 
 .flip-container.next {
-
+  //opacity: 0;
+  //transform: translateX(16%) rotateY(-16deg) translateZ(0) !important;
+  //pointer-events: none;
+  //transition: transform 240ms ease,opacity 120ms linear !important;
 }
 
 .flip-container.previous {
-
+  //opacity: 0;
+  //transform: translateX(-16%) rotateY(16deg) translateZ(0) !important;
+  //pointer-events: none;
+  //transition: transform 240ms ease,opacity 120ms linear !important;
 }
 
 .front, .back {
