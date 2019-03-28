@@ -32,12 +32,20 @@ permalink: /category/
                   <article>
                     <h4><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h4>
                     <p>
+                      {% assign imgheight = "135px" %}
+                      {% if post.word_phonetic %}
+                        {{post.word_phonetic}}
+                        <br>
+                        {% assign imgheight = "110px" %}
+                      {% endif %}
                       {% if post.img %}
                         {% if post.img contains 'http://' or post.img contains 'https://' %}
-                          <img width="100%" src="{{post.img}}" alt="{{post.title}}">
+                          <img height={{imgheight}} src="{{post.img}}" alt="{{post.title}}">
                         {% else %}
-                          <img width="100%" src="{{site.baseurl}}/images/{{post.img}}" alt="{{post.title}}">
+                          <img height={{imgheight}} src="{{site.baseurl}}/images/{{post.img}}" alt="{{post.title}}">
                         {% endif %}
+                      {% else %}
+                        {{post.word_excerpt}}
                       {% endif %}
                     </p>
                   </article>

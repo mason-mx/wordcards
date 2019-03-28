@@ -256,9 +256,7 @@ dt {
 .flip-container, .front, .back {
   width: 100%;
   min-height: 200px;
-  line-height: 100px;
   text-align: center;
-  font-size: 30px;
   border-radius: 5px;
 }
 
@@ -300,6 +298,8 @@ dt {
 .front {
   z-index: 2;
   color: white;
+  line-height: 100px;
+  font-size: 30px;
 
   span{
     font-size:20px;
@@ -312,7 +312,7 @@ dt {
 
 .back {
   transform: rotateY(180deg);
-  font-size: 18px;
+  font-size: 16px;
   border:1px solid;
   font-family: Verdana;
   color: white;

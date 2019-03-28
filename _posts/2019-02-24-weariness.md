@@ -2,7 +2,8 @@
 layout: post
 title:  "Weariness"
 categories: undefined
-tag: good
+tag: fail
+word_excerpt: His eyes were half closing in weariness.
 ---
 <DIV style="MARGIN: 0px 0px 5px">wear<B>·</B>y<SUP>1</SUP> /ˈwɪəri US ˈwɪr-/ <I>adj</I> <BR>[Language: Old English; Origin: werig]<BR>*very tired or bored, especially because you have been doing something for a long time<BR>　*<I>She found Rachel in the kitchen, looking old and weary.</I><BR>　*<I>She sat down with a weary sigh.</I><BR><B>weary of (doing) sth</B><BR>　*<I>He was weary of the constant battle between them.</I><BR>* <I>especially literary</I> very tiring<BR>　*<I>a long and weary march</I><BR><B>&gt;wearily</B> <I>adv</I> <BR><B>&gt;weariness</B> <I>n</I> [U]</DIV>
 <DIV style="COLOR: #808080; MARGIN: 0px 0px 5px; LINE-HEIGHT: normal"><SPAN style="FONT-SIZE: 10.5pt; COLOR: #000000; LINE-HEIGHT: normal"><B>weary</B></SPAN> <SUP style="FONT-SIZE: 83%; LINE-HEIGHT: normal">2</SUP> &nbsp;</DIV>
