@@ -1,8 +1,10 @@
 ---
 layout: post
 title:  "Appliance"
-categories: undefined
+categories: shopping
 tag: good
+word_phonetic: /əˈplaɪəns/
+img: https://5.imimg.com/data5/NK/QD/MY-7688301/combo-offer-for-house-hold-items-500x500.jpg
 ---
 <DIV style="MARGIN: 0px 0px 5px">ap<B>·</B>pli<B>·</B>ance /əˈplaɪəns/ <I>n</I> [C] <BR>a piece of equipment, especially electrical equipment, such as a <A href="{{ site.baseurl }}/cooker"><U>cooker</U></A> or <A href="{{ site.baseurl }}/washing%20machine"><U>washing machine</U></A>, used in people's homes<BR><B>domestic/household etc appliance</B><BR>　*<I>There's plenty of space for all the usual kitchen appliances.</I><BR><B>electrical/gas appliance</B><BR><I>see usage note</I> <B><A href="{{ site.baseurl }}/machine"><U>machine</U></A> </B><SUP>1 </SUP></DIV>
 <DIV style="MARGIN: 0px 0px 5px">

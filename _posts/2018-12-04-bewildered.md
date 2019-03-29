@@ -3,6 +3,7 @@ layout: post
 title:  "Bewildered"
 categories: undefined
 tag: good
+word_phonetic: /bɪˈwɪldəd/
 ---
 <DIV style="MARGIN: 0px 0px 5px">be<B>·</B>wil<B>·</B>dered /bɪˈwɪldəd US -ərd/ <I>adj</I> <BR>totally confused<BR>　*<I>a bewildered expression on his face</I></DIV>
 <DIV style="MARGIN: 0px 0px 5px">
