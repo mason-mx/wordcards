@@ -17,10 +17,17 @@ layout: index
       {% assign fail=fail | plus:1 %}
     {% endif %}
   {% endfor %}
-  <div id="tags_pie_chart" data-easy="{{ easy }}" data-good="{{ good }}" data-fail="{{ total }}" style="height: 500px; width: 100%;" class="plotly-graph-div">
+  <div class="row">
+    <div class="d-flex justify-content-end w-100 px-5">
+      <div>
+        <a href="{{ site.baseurl }}/tagged">Check out all tags...</a>
+      </div>
+    </div>
+  </div>
+  <div id="tags_pie_chart" data-easy="{{ easy }}" data-good="{{ good }}" data-fail="{{ total }}" style="height: 360px; width: 100%;" class="plotly-graph-div">
   </div>
 
-  <div id="categories" class="row pack">
+  <div id="categories" class="row">
     {% for category in site.categories %}
       {% capture category_name %}{{ category | first }}{% endcapture %}
       <div class="col-md-4 card">
