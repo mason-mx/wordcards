@@ -2,7 +2,9 @@
 layout: post
 title:  "Syndicate"
 categories: undefined
-tag: good
+tag: fail
+word_phonetic: /ˈsɪndɪkɪt/
+word_excerpt: a group of people or companies who join together in order to achieve a particular aim
 ---
 <DIV style="MARGIN: 0px 0px 5px">syn<B>·</B>di<B>·</B>cate<SUP>1</SUP> /ˈsɪndɪkɪt/ <I>n</I> [C] <BR>[Date: 1600-1700; Language: French; Origin: syndicat, from syndic <I>'someone who does business for another'</I>, from <I>Late Latin</I> syndicus, from <I>Greek</I>, from syn- ( <B>SYN-</B>) + dike <I>'judgment, law case'</I>]<BR>a group of people or companies who join together in order to achieve a particular aim<BR><B>syndicate of</B><BR>　*<I>a syndicate of banks</I></DIV>
 <DIV style="COLOR: #808080; MARGIN: 0px 0px 5px; LINE-HEIGHT: normal"><SPAN style="FONT-SIZE: 10.5pt; COLOR: #000000; LINE-HEIGHT: normal"><B>syndicate</B></SPAN> <SUP style="FONT-SIZE: 83%; LINE-HEIGHT: normal">2</SUP> &nbsp;</DIV>
