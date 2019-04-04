@@ -11,7 +11,7 @@ layout: index
     {% assign total=total | plus:1 %}
     {% if post.tags contains "easy" %}
       {% assign easy=easy | plus:1 %}
-    {% else post.tags contains "good" %}
+    {% elsif post.tags contains "good" %}
       {% assign good=good | plus:1 %}
     {% else %}
       {% assign fail=fail | plus:1 %}
@@ -24,7 +24,7 @@ layout: index
       </div>
     </div>
   </div>
-  <div id="tags_pie_chart" data-easy="{{ easy }}" data-good="{{ good }}" data-fail="{{ total }}" style="height: 360px; width: 100%;" class="plotly-graph-div">
+  <div id="tags_pie_chart" data-easy="{{ easy }}" data-good="{{ good }}" data-fail="{{ fail }}" style="height: 360px; width: 100%;" class="plotly-graph-div">
   </div>
 
   <div id="categories" class="row">
