@@ -1,10 +1,11 @@
 ---
 layout: post
 title:  "Foundation"
-categories: undefined
+categories: housing
 tag: good
+word_excerpt: The earthquake shook the foundations of the house.
 ---
-<DIV style="MARGIN: 0px 0px 5px">foun<B>·</B>da<B>·</B>tion<BR><B>W2</B> /faunˈdeɪʃən/ <I>n</I> 
+<DIV style="MARGIN: 0px 0px 5px">foun<B>·</B>da<B>·</B>tion<BR><B>W2</B> /faunˈdeɪʃən/ <I>n</I>
 <HR>
 <B>1【building】</B><BR><B>2【basic idea】</B><BR><B>3【organization】</B><BR><B>4【establishment】</B><BR><B>5 be without foundation</B><BR><B>6 lay/provide the foundation(s) for something</B><BR><B>7【skin】</B><BR><B>8 shake/rock the foundations of something</B>
 <HR>
