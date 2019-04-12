@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Foundation"
-categories: housing
+categories: home
 tag: good
 word_excerpt: The earthquake shook the foundations of the house.
 ---

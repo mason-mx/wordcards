@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Tradesman"
-categories: housing
+categories: home
 tag: fail
 img: http://www.publicliability.co/wp-content/uploads/2012/07/public-liability-insurance-for-tradesmen.jpg
 ---
