@@ -9,7 +9,7 @@
 title: Word Cards
 email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
-  Word Cards is a Bootstrap based jekyll theme for scene vocabulary.
+  A Bootstrap based jekyll theme for scene vocabularies.
 
 
 baseurl: "/wordcards" # the subpath of your site, e.g. /blog

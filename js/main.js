@@ -1,26 +1,35 @@
-function drawChart() {
-  var tags_pie_chart = $("#tags_pie_chart");
-	var easy = Number(tags_pie_chart.attr("data-easy"));
-	var good = Number(tags_pie_chart.attr("data-good"));
-	var fail = Number(tags_pie_chart.attr("data-fail"));
+function emptyResultsContainer () {
+    $("#results-container").empty();
+}
 
-  var data = google.visualization.arrayToDataTable([
-    ['Tags', 'Words'],
-    ['EASY',     easy],
-    ['GOOD',      good],
-    ['FAIL',  fail]
-  ]);
-
-  var options = {
-    title: 'The Words Distributioin'
-  };
-
-  var chart = new google.visualization.PieChart(document.getElementById('tags_pie_chart'));
-
-  chart.draw(data, options);
+function JekyllSearch(){
+    var items = [];
+    $.getJSON( "/wordcards/search.json", function( data ) {
+        $.each( data, function( key, val ) {
+            items.push( "<li><a href='" + val.url + "'>" +val.title + "</a></li>" );
+        });
+    });
+    $("#search-input").keyup(function(){
+        $("#search-input").css("background-color","pink");
+        var text = document.getElementById('search-input').value;
+        emptyResultsContainer();
+        if (text.length > 0) {
+            var re = new RegExp(text, "gi");
+            $.each(items, function( index, value ) {
+                //console.log(value);
+                var res = value.match(re);
+                //console.log(res);
+                if(res != null) {
+                    $("#results-container").append(value);
+                }
+            }); 
+        }
+        else {
+            $("#search-input").css("background-color","white");
+        }
+    });
 }
 
 $(document).ready(function(){
-  google.charts.load('current', {'packages':['corechart']});
-  google.charts.setOnLoadCallback(drawChart);
+  JekyllSearch();
 });

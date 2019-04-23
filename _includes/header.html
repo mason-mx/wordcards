@@ -14,7 +14,18 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
+      <form class="navbar-form navbar-left">
+        <div class="input-group">
+          <input type="text" id="search-input" class="form-control" placeholder="Search">
+          <div class="input-group-btn">
+            <button class="btn btn-default" type="submit">
+            <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+        <ul id="results-container"></ul>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
         <li><a href="{{site.baseurl}}/about/">About</a></li>
         <li><a href="{{site.baseurl}}/contact/">Contact</a></li>
         <li class="dropdown">
