@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Intercept"
-categories: math
+categories: science
 tag: fail
 img: http://www.coolmath.com/sites/cmat/files/images/03-lines-01.gif
 ---

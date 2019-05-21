@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Exponential"
-categories: [math, computer]
+categories: [science, computer]
 tag: fail
 word_phonetic: /ˌekspəˈnenʃəl/
 img: https://i.stack.imgur.com/A4aGJ.jpg
