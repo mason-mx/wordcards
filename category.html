@@ -1,13 +1,13 @@
 ---
 layout: page
-title: Words In Categories
+title: Categories
 permalink: /category/
 ---
 
 <div class="home">
   <div class="row" id="categories">
     {% for category in site.categories %}
-    <div class="col-3 categories-group">
+    <div class="col-md-3 categories-group">
       {% capture category_name %}{{ category | first }}{% endcapture %}
       <div class="row" id="#{{ category_name | slugize }}">
         <h3 class="category-head">{{ category_name }}</h3>

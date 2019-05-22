@@ -7,7 +7,7 @@ permalink: /tagged/
 <div class="home">
   <div id="tags" class="row">
     {% for tag in site.tags %}
-      <div class="col-4 tags-group">
+      <div class="col-md-4 tags-group">
         {% capture tag_name %}{{ tag | first }}{% endcapture %}
         <div class="row" id="#{{ tag_name | slugize }}">
           <h3 class="tag-head">{{ tag_name }}</h3>
