@@ -1,0 +1,10 @@
+---
+layout: post
+title:  "Perspective"
+categories: office
+tag: fail
+word_excerpt: from sb's pERspective
+---
+<DIV style="MARGIN: 0px 0px 5px">per<B>·</B>spec<B>·</B>tive<BR><B>W3</B> /pəˈspektɪv US pər-/ <I>n</I> <BR>[Date: 1300-1400; Language: Medieval Latin; Origin: perspectiva, from perspectivus <I>'of sight'</I>, from <I>Latin</I> perspicere <I>'to look through, see clearly'</I>]<BR>* [C] <BR>a way of thinking about something, especially one which is influenced by the type of person you are or by your experiences<BR>→<A href="{{ site.baseurl }}/viewpoint"><U>viewpoint</U></A> <B>perspective on</B><BR>　*<I>His father's death gave him a whole new perspective on life.</I><BR><B>from sb's perspective</B><BR>　*<I>The novel is written from a child's perspective.</I><BR><B>from a feminist/Christian/global etc perspective</B><BR>　*<I>We have to look at everything from an international perspective.</I><BR>　*<I>a much-needed <B>historical perspective</B> </I><BR><B>wider/broader perspective</B><BR>　*<I>Our work in Uganda and Romania adds a wider perspective.</I><BR>*[U] <BR>a sensible way of judging and comparing situations so that you do not imagine that something is more serious than it really is<BR>　*<I>I think Viv's <B>lost</B> all <B>sense of perspective</B> .</I><BR>　*<I>The figures have to be <B>put into perspective</B> .</I><BR><B>get/keep sth in perspective</B><BR>(=judge the importance of something correctly) <BR>*[U] <BR>a method of drawing a picture that makes objects look solid and shows distance and depth, or the effect this method produces in a picture<BR>　*<I>the artist's use of perspective</I><BR>* [C] <I>formal</I> <BR>a view, especially one in which you can see a long way into the distance</DIV>
+<DIV style="MARGIN: 0px 0px 5px">
+<DIV style="MARGIN: 4px 0px">syn.: <A href="{{ site.baseurl }}/linear%20perspective"><U>linear perspective</U></A> <A href="{{ site.baseurl }}/position"><U>position</U></A> <A href="{{ site.baseurl }}/view"><U>view</U></A></DIV></DIV>

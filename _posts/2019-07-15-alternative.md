@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "Alternative"
+categories: undefined
+tag: good
+---
+<DIV style="MARGIN: 0px 0px 5px">al<B>·</B>ter<B>·</B>na<B>·</B>tive<SUP>1</SUP> <B>W2S2</B> /ɔːlˈtəːnətɪv US ɔːlˈtəːr-, æl-/ <I>adj</I> <BR>* [only before noun] <BR>an alternative idea, plan etc is different from the one you have and can be used instead<BR><B>alternative ways/approach/methods etc</B><BR>　*<I>alternative approaches to learning</I><BR>　*<I>Have you any <B>alternative suggestions</B> ?</I><BR>　*<I>An <B>alternative route</B> is along the Via Unione.</I><BR>*deliberately different from what is usual, expected, or traditional<BR><B>alternative music/theatre etc</B><BR>　*<I>Tucson's alternative radio station</I><BR>　*<I>sources of <B>alternative energy</B> (=energy produced by the sun, wind etc rather than by gas, coal etc)</I> <BR>　*<I>tolerance of <B>alternative lifestyles</B> </I><BR><B>alternative medicine/therapies</B><BR>(=medical treatment that is not based on the usual western methods)<BR>　*<I>Acupuncture is widely used by practitioners of alternative medicine.</I><BR><B>&gt;alternatively</B> <I>adv</I><BR>　*<I>You can relax on the beach <B>or alternatively</B> try the bustling town centre.</I></DIV>
+<DIV style="COLOR: #808080; MARGIN: 0px 0px 5px; LINE-HEIGHT: normal"><SPAN style="FONT-SIZE: 10.5pt; COLOR: #000000; LINE-HEIGHT: normal"><B>alternative</B></SPAN> <SUP style="FONT-SIZE: 83%; LINE-HEIGHT: normal">2</SUP> </DIV>
+<DIV style="MARGIN: 0px 0px 5px">alternative<SUP>2</SUP> <B>W3S2</B> <I>n</I> [C] <BR>something you can choose to do or use instead of something else<BR><B>alternative to</B><BR>　*<I>Is there a <B>viable alternative</B> to the present system?</I><BR>　*<I>If payment is not received within five days, legal action will be our <B>only alternative</B> .</I><BR>　*<I>I <B>had no alternative</B> but to report him to the police.</I><BR>　*<I>He quickly assessed what alternatives were open to him.</I></DIV>
+<DIV style="MARGIN: 0px 0px 5px">
+<DIV style="MARGIN: 4px 0px">syn.: <A href="{{ site.baseurl }}/choice"><U>choice</U></A> <A href="{{ site.baseurl }}/replacement"><U>replacement</U></A> <A href="{{ site.baseurl }}/substitute"><U>substitute</U></A></DIV></DIV>
