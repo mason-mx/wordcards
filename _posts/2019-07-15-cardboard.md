@@ -3,6 +3,7 @@ layout: post
 title:  "Cardboard"
 categories: shopping
 tag: good
+img: http://d2qsfz7lafswjr.cloudfront.net/thumbcache/175x175/301/pratt/large/PRA0039-11-25x8-75x6-MD.jpg
 ---
 <DIV style="MARGIN: 0px 0px 5px">card<B>·</B>board<SUP>1</SUP> /ˈkɑːdbɔːd US ˈkɑːrdbɔːrd/ <I>n</I> [U] <BR><BR>a stiff brown material like very thick paper, used especially for making boxes<BR>　*<I>We covered the hole with a sheet of cardboard.</I></DIV>
 <DIV style="COLOR: #808080; MARGIN: 0px 0px 5px; LINE-HEIGHT: normal"><SPAN style="FONT-SIZE: 10.5pt; COLOR: #000000; LINE-HEIGHT: normal"><B>cardboard</B></SPAN> <SUP style="FONT-SIZE: 83%; LINE-HEIGHT: normal">2</SUP> </DIV>
