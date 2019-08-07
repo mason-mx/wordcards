@@ -6,6 +6,7 @@ permalink: /tagged/
 
 <div class="home">
   <div id="tags" class="row">
+    {% assign audioPath = '{{site.baseurl}}/asset/audio/' %}
     {% for tag in site.tags %}
       <div class="col-md-4 tags-group">
         {% capture tag_name %}{{ tag | first }}{% endcapture %}
@@ -25,7 +26,13 @@ permalink: /tagged/
                   <div class="front">
                     <article>
                       <h4>{{post.tag}}</h4>
-                      <p>{{post.title}}</p>
+                      <h2 style="margin-bottom: 0;">{{post.title}}</h2>
+                      {% if post.word_phonetic %}
+                        <audio controls style="width: 70%;height: 30px;">
+                          <source src="{{site.baseurl}}/asset/audio/{{post.title | downcase}}.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                        </audio>
+                      {% endif %}
                     </article>
                   </div>
                   <div class="back">

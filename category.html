@@ -25,7 +25,13 @@ permalink: /category/
                 <div class="front">
                   <article>
                     <h4>{{post.tag}}</h4>
-                    <p>{{post.title}}</p>
+                    <h2 style="margin-bottom: 0;">{{post.title}}</h2>
+                      {% if post.word_phonetic %}
+                        <audio controls style="width: 70%;height: 30px;">
+                          <source src="{{site.baseurl}}/asset/audio/{{post.title | downcase}}.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                        </audio>
+                      {% endif %}
                   </article>
                 </div>
                 <div class="back">
