@@ -1,0 +1,10 @@
+---
+layout: post
+title:  "Elevation"
+categories: home
+tag: fail
+word_phonetic: /ˌelɪˈveɪʃən/
+---
+<DIV style="MARGIN: 0px 0px 5px">el<B>·</B>e<B>·</B>va<B>·</B>tion /ˌelɪˈveɪʃən/ <I>n</I> <BR>* [singular] <BR>a height above the level of the sea<BR><B>elevation of</B><BR>　*<I>The road climbs steadily to an elevation of 1400 feet.</I><BR>*[U] <I>formal</I> <BR>an act of moving someone to a more important rank or position<BR><B>elevation to</B><BR>　*<I>her sudden elevation to international stardom</I><BR>* [U and C] <I>formal</I> <BR>an increase in the amount or level of something<BR>　*<I>a sudden elevation of blood pressure</I><BR>* [C] <I>technical</I> <BR>an upright side of a building, as shown in a drawing done by an <A href="{{ site.baseurl }}/architect"><U>architect</U></A> (=person who plans buildings) <BR>　*<I>the front elevation of a house</I><BR>* [C] <I>technical</I> <BR>the angle made with the <A href="{{ site.baseurl }}/horizon"><U>horizon</U></A> by pointing a gun<BR>　*<I>The cannon was fired at an elevation of 60 degrees.</I></DIV>
+<DIV style="MARGIN: 0px 0px 5px">
+<DIV style="MARGIN: 4px 0px">syn.: <A href="{{ site.baseurl }}/ALT"><U>ALT</U></A> <A href="{{ site.baseurl }}/EL"><U>EL</U></A> <A href="{{ site.baseurl }}/acme"><U>acme</U></A> <A href="{{ site.baseurl }}/aggrandisement"><U>aggrandisement</U></A> <A href="{{ site.baseurl }}/aggrandizement"><U>aggrandizement</U></A> <A href="{{ site.baseurl }}/altitude"><U>altitude</U></A> <A href="{{ site.baseurl }}/height"><U>height</U></A> <A href="{{ site.baseurl }}/lift"><U>lift</U></A> <A href="{{ site.baseurl }}/meridian"><U>meridian</U></A> <A href="{{ site.baseurl }}/natural%20elevation"><U>natural elevation</U></A> <A href="{{ site.baseurl }}/peak"><U>peak</U></A> <A href="{{ site.baseurl }}/pinnacle"><U>pinnacle</U></A> <A href="{{ site.baseurl }}/raising"><U>raising</U></A> <A href="{{ site.baseurl }}/summit"><U>summit</U></A> <A href="{{ site.baseurl }}/superlative"><U>superlative</U></A> <A href="{{ site.baseurl }}/tiptop"><U>tiptop</U></A> <A href="{{ site.baseurl }}/top"><U>top</U></A></DIV></DIV>
