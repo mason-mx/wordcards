@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Talkative"
-categories: undefined
+categories: office
 tag: good
 ---
 <DIV style="MARGIN: 0px 0px 5px">talk<B>·</B>a<B>·</B>tive /ˈtɔːkətɪv US ˈtɔːk-/ <I>adj</I> <BR>someone who is talkative talks a lot</DIV>

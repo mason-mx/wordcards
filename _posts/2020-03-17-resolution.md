@@ -1,8 +1,9 @@
 ---
 layout: post
 title:  "Resolution"
-categories: undefined
+categories: wellness
 tag: good
+word_excerpt: New Year's resolution
 ---
 <DIV style="MARGIN: 0px 0px 5px">res<B>·</B>o<B>·</B>lu<B>·</B>tion<BR><B>W3</B> /ˌrezəˈluːʃən/ <I>n</I> 
 <HR>
